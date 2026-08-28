@@ -141,7 +141,7 @@ python scripts/evaluate_similarity.py
 
 ## Results
 
-No experiment results are fabricated in this repository. If experiments have not been run in this repository version, result tables remain absent or empty. Semantic-similarity evaluation is pending manual annotation unless completed human annotation files are present.
+Results are reported only for completed experiments. Semantic-similarity evaluation remains pending manual annotation unless completed human annotation files are present.
 
 ## Limitations
 
