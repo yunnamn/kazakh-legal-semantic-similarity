@@ -31,3 +31,26 @@ def test_evaluation_rejects_pseudo_label_columns():
     with pytest.raises(ValueError):
         evaluate_score_column(df, "system", _config())
 
+
+@pytest.mark.parametrize("model_key,variant", [("mbert", "dapt"), ("labse", "base")])
+def test_encoder_uses_selected_corpus_condition_config(monkeypatch, model_key, variant):
+    import numpy as np
+    import src.evaluation as evaluation
+
+    config = {"paths": {"models_dir": "models/adilet"}}
+    seen = []
+
+    class Encoder:
+        def __init__(self, *args, config=None):
+            seen.append(config)
+
+        def encode(self, texts):
+            return np.array([[1.0, 0.0]] * len(texts))
+
+    monkeypatch.setattr(evaluation, "LaBSEEncoder", Encoder)
+    monkeypatch.setattr(evaluation, "TransformerSentenceEncoder", Encoder)
+    pairs = pd.DataFrame({"pair_id": ["p1"], "sentence_1": ["сот"], "sentence_2": ["заң"]})
+    scores = evaluation.score_pairs_with_encoder(pairs, model_key, variant, config=config)
+    assert seen == [config]
+    assert scores[f"{model_key}_{variant}"].tolist() == [1.0]
+

@@ -112,6 +112,8 @@ def _iter_c4_rows(config: dict):
 
 def build_corpus_from_c4(config: dict | None = None) -> pd.DataFrame:
     config = config or load_config()
+    if config.get("corpus_input", {}).get("kind", "c4") != "c4":
+        raise ValueError("This configuration uses an exported legal corpus. Build it with corpus_pipeline instead.")
     save_path = get_path(config, "corpus_jsonl")
     rows: list[dict] = []
     seen: set[str] = set()
@@ -190,6 +192,8 @@ def load_jsonl(path: str | Path) -> pd.DataFrame:
 
 def load_corpus(config: dict | None = None) -> pd.DataFrame:
     config = config or load_config()
+    if config.get("corpus_input", {}).get("kind", "c4") != "c4":
+        raise ValueError("Use load_split for exported legal corpora; the C4 corpus file is a different input.")
     return load_jsonl(get_path(config, "corpus_jsonl"))
 
 
@@ -234,6 +238,8 @@ def check_no_split_overlap(df: pd.DataFrame) -> None:
 
 def make_splits(corpus_df: pd.DataFrame, config: dict | None = None) -> pd.DataFrame:
     config = config or load_config()
+    if config.get("corpus_input", {}).get("kind", "c4") != "c4":
+        raise ValueError("Do not resplit exported legal corpora; preserve the corpus_pipeline assignments.")
     validate_split_ratios(config)
     df = corpus_df.copy()
     for col in ["sentence_id", "text_hash", "dedup_hash"]:
@@ -258,4 +264,12 @@ def load_split(name: str, config: dict | None = None) -> pd.DataFrame:
     if name not in SPLITS:
         raise ValueError(f"Unknown split: {name}")
     config = config or load_config()
+    corpus_input = config.get("corpus_input", {})
+    kind = corpus_input.get("kind", "c4")
+    if kind == "training_view":
+        from .legal_corpus import load_training_view
+
+        return load_training_view(name, corpus_input["directory"])
+    if kind != "c4":
+        raise ValueError(f"Unknown corpus input kind: {kind}")
     return load_jsonl(get_path(config, f"{name}_jsonl"))

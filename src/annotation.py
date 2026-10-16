@@ -166,7 +166,9 @@ def annotate_pairs_cli(annotator_id: str, config: dict | None = None, resume: bo
     candidates_path = get_path(config, "annotation_candidates")
     candidates = pd.read_csv(candidates_path)
     reject_pseudo_label_columns(candidates)
-    out_path = get_path(config, "annotations_dir") / f"annotations_{annotator_id}.csv"
+    output_key = "annotation_output_dir" if "annotation_output_dir" in config["paths"] else "annotations_dir"
+    out_path = get_path(config, output_key) / f"annotations_{annotator_id}.csv"
+    out_path.parent.mkdir(parents=True, exist_ok=True)
     if resume and out_path.exists():
         annotations = pd.read_csv(out_path)
     else:

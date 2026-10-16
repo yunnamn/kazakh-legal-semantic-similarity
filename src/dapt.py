@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import math
 from pathlib import Path
 
 import numpy as np
@@ -154,12 +155,11 @@ def train_dapt(model_key: str, config: dict | None = None) -> dict:
     train_cfg = config["training"]
     args = TrainingArguments(
         output_dir=str(trainer_dir),
-        overwrite_output_dir=True,
         max_steps=int(train_cfg["max_steps"]),
         per_device_train_batch_size=int(train_cfg["train_batch_size"]),
         per_device_eval_batch_size=int(train_cfg["eval_batch_size"]),
         learning_rate=float(train_cfg["learning_rate"]),
-        warmup_ratio=float(train_cfg["warmup_ratio"]),
+        warmup_steps=math.ceil(int(train_cfg["max_steps"]) * float(train_cfg["warmup_ratio"])),
         eval_strategy="steps",
         eval_steps=int(train_cfg["eval_steps"]),
         save_strategy="steps",
@@ -200,6 +200,8 @@ def train_dapt(model_key: str, config: dict | None = None) -> dict:
     history = pd.DataFrame(trainer.state.log_history)
     metrics_dir = get_path(config, "metrics_dir")
     figures_dir = get_path(config, "figures_dir")
+    metrics_dir.mkdir(parents=True, exist_ok=True)
+    figures_dir.mkdir(parents=True, exist_ok=True)
     history.to_csv(metrics_dir / f"{model_key}_dapt_history.csv", index=False)
     metadata = {
         "model": model_key,
@@ -211,6 +213,9 @@ def train_dapt(model_key: str, config: dict | None = None) -> dict:
         "max_steps": int(train_cfg["max_steps"]),
         "seed": int(config["seed"]),
     }
+    if train_df.attrs.get("corpus_build_id"):
+        metadata["corpus_build_id"] = train_df.attrs["corpus_build_id"]
+        metadata["corpus_experiment_id"] = train_df.attrs["experiment_id"]
     (metrics_dir / f"{model_key}_dapt_metadata.json").write_text(
         json.dumps(metadata, indent=2), encoding="utf-8"
     )
@@ -261,7 +266,7 @@ def evaluate_mlm_checkpoint(model_key: str, variant: str, test_df: pd.DataFrame,
             masked = int((batch["labels"] != -100).sum().item())
             weighted_loss += float(output.loss.item()) * masked
             n_masked += masked
-    return {
+    result = {
         "model": model_key,
         "display_name": specs[model_key]["display_name"],
         "variant": variant,
@@ -271,4 +276,8 @@ def evaluate_mlm_checkpoint(model_key: str, variant: str, test_df: pd.DataFrame,
         "n_masked_tokens": n_masked,
         "mask_seed": int(config["seed"]),
     }
+    if test_df.attrs.get("corpus_build_id"):
+        result["corpus_build_id"] = test_df.attrs["corpus_build_id"]
+        result["corpus_experiment_id"] = test_df.attrs["experiment_id"]
+    return result
 

@@ -1,0 +1,45 @@
+usage: kazlegal-corpus [-h]
+                       {import-raw,freeze-raw,inspect-hub,acquire-hub,discover-catalog,acquire-adilet,process,split,audit-repo,experiment-review-template,freeze-experiment,config-hash,validate,qa-template,export,statistics,show-document} ...
+
+Authentic-source Kazakh legislation corpus pipeline; no generated legal text
+
+positional arguments:
+  {import-raw,freeze-raw,inspect-hub,acquire-hub,discover-catalog,acquire-adilet,process,split,audit-repo,experiment-review-template,freeze-experiment,config-hash,validate,qa-template,export,statistics,show-document}
+    import-raw          Register a lawful manual download with an explicit
+                        acquisition sidecar
+    freeze-raw          Freeze content receipts and their transitive evidence
+                        dependencies
+    inspect-hub         Resolve a candidate dataset revision and list files,
+                        without approving reuse
+    acquire-hub         Download exact files at a full pinned commit, plus the
+                        dataset card
+    discover-catalog    Derive a Kazakh Adilet acquisition manifest from
+                        reusable metadata
+    acquire-adilet      Rate-limited, robots-aware retrieval; stops on access
+                        restrictions
+    process             Create an immutable normalized snapshot, preserving
+                        all document occurrences
+    split               Assign document-family leakage components to the four
+                        required roles
+    audit-repo          Read every tracked local file and emit review
+                        candidates; does not claim a scientific audit
+    experiment-review-template
+                        Create an unapproved review form from a local
+                        inventory
+    freeze-experiment   Bind a human-reviewed reconstruction to original
+                        evaluation files
+    config-hash         Print the exact corpus policy hash for an experiment
+                        review
+    validate            Check raw integrity, provenance, offsets, disposition
+                        and independent leakage scans
+    qa-template         Select deterministic source documents; all human
+                        responses remain blank
+    export              Create explicit training views only after the audit,
+                        validation and human QA gates
+    statistics          Print measured statistics for an existing immutable
+                        build
+    show-document       Display the full retained document and all structural
+                        provenance for human QA
+
+options:
+  -h, --help            show this help message and exit

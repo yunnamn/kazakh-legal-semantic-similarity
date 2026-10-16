@@ -1,0 +1,17 @@
+{
+  "source": "adilet",
+  "adapter": "adilet_html",
+  "format": "html",
+  "source_document_id": "K950001000_",
+  "source_url": "https://adilet.zan.kz/kaz/docs/K950001000_",
+  "canonical_url": "https://adilet.zan.kz/kaz/docs/K950001000_",
+  "language": "kk",
+  "title": null,
+  "source_version": null,
+  "source_retrieved_at": null,
+  "retrieved_at": "REPLACE_WITH_ACTUAL_BROWSER_DOWNLOAD_TIMESTAMP",
+  "acquisition_method": "manual",
+  "acquisition_note": "REPLACE_WITH_ACTUAL_PERMITTED_BROWSER_EXPORT_METHOD",
+  "selector": null,
+  "source_review": {}
+}

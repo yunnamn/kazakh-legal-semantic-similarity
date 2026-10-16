@@ -4,6 +4,7 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+*.egg-info/
 .venv/
 venv/
 env/
@@ -18,6 +19,7 @@ data/corpus_statistics.json
 data/split_metadata.json
 data/annotation_candidates.csv
 data/annotations/annotations_*.csv
+data/legal_corpus/
 
 # Model and trainer artifacts
 models/*

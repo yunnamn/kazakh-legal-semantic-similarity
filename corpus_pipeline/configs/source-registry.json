@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "status": "assessment_not_permission_or_acquisition_lock",
+  "sources": [
+    {
+      "source": "adilet",
+      "kind": "official_primary",
+      "decision": "core_subject_to_actual_access_review",
+      "adapter": [
+        "adilet_html",
+        "adilet_text"
+      ],
+      "license_claim": "Kazakhstan copyright law Article 8 official-document exclusion",
+      "url": "https://adilet.zan.kz/eng",
+      "content_available_in_delivery": false,
+      "research_use_approved": false,
+      "pinned_acquired_revision": null,
+      "assessment_date": "2026-09-07"
+    },
+    {
+      "source": "Arailym-tleubayeva/KazakhLawCorpus-clean",
+      "kind": "metadata_only",
+      "decision": "reuse_discovery_not_body",
+      "adapter": "catalog_clean",
+      "license_claim": "CC-BY-4.0",
+      "observed_publisher_rows": 215889,
+      "observed_content_path": "data/kazakhlawcorpus_kk_only.csv",
+      "url": "https://huggingface.co/datasets/Arailym-tleubayeva/KazakhLawCorpus-clean",
+      "research_use_approved": false,
+      "pinned_acquired_revision": null,
+      "assessment_date": "2026-09-07"
+    },
+    {
+      "source": "Arailym-tleubayeva/KazakhLawCorpus",
+      "kind": "metadata_only",
+      "decision": "alternate_discovery_not_body",
+      "adapter": "catalog_original",
+      "license_claim": "Apache-2.0",
+      "observed_publisher_rows": 223245,
+      "observed_content_path": "data/laws_metadata.csv",
+      "url": "https://huggingface.co/datasets/Arailym-tleubayeva/KazakhLawCorpus",
+      "research_use_approved": false,
+      "pinned_acquired_revision": null,
+      "assessment_date": "2026-09-07"
+    },
+    {
+      "source": "Arailym-tleubayeva/LegalRAG",
+      "kind": "publisher_processed_chunks",
+      "decision": "conditional_opt_in_not_default_core",
+      "adapter": "legalrag",
+      "license_claim": "CC-BY-4.0",
+      "limitations": [
+        "chunk boundaries",
+        "possible lost inline references",
+        "doc_id may be title"
+      ],
+      "url": "https://huggingface.co/datasets/Arailym-tleubayeva/LegalRAG",
+      "research_use_approved": false,
+      "pinned_acquired_revision": null,
+      "assessment_date": "2026-09-07"
+    },
+    {
+      "source": "kurumikz/kazakhstan_legal_corpus",
+      "kind": "publisher_processed_aligned_documents",
+      "decision": "conditional_opt_in_kk_only",
+      "adapter": "kurumikz",
+      "license_claim": "ODC-By-1.0",
+      "limitations": [
+        "viewer parsing error does not prove all raw bytes corrupt",
+        "removed footnotes reported",
+        "per-document URL/title/original crawl time not established"
+      ],
+      "url": "https://huggingface.co/datasets/kurumikz/kazakhstan_legal_corpus",
+      "research_use_approved": false,
+      "pinned_acquired_revision": null,
+      "assessment_date": "2026-09-07"
+    },
+    {
+      "source": "olzhasAl/adilet-legal-qa-kz",
+      "kind": "generated_qa",
+      "decision": "exclude_generated_text",
+      "adapter": null,
+      "license_claim": "Apache-2.0",
+      "url": "https://huggingface.co/datasets/olzhasAl/adilet-legal-qa-kz",
+      "research_use_approved": false,
+      "pinned_acquired_revision": null,
+      "assessment_date": "2026-09-07"
+    },
+    {
+      "source": "Arailym-tleubayeva/KazakhTextDuplicates",
+      "kind": "mixed_text_and_synthetic_variants",
+      "decision": "not_authentic_legal_core_or_replacement_gold",
+      "adapter": null,
+      "url": "https://huggingface.co/datasets/Arailym-tleubayeva/KazakhTextDuplicates",
+      "research_use_approved": false,
+      "pinned_acquired_revision": null,
+      "assessment_date": "2026-09-07"
+    },
+    {
+      "source": "KazParC",
+      "kind": "multidomain_parallel_plus_separate_SynC",
+      "decision": "no_default_adapter; verified original legal subset only in separately reviewed extension; exclude SynC",
+      "adapter": null,
+      "url": "https://github.com/IS2AI/KazParC",
+      "research_use_approved": false,
+      "pinned_acquired_revision": null,
+      "assessment_date": "2026-09-07"
+    }
+  ]
+}

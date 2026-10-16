@@ -1,0 +1,72 @@
+# Alternative corpus condition; the C4 default remains unchanged.
+# Generate the JSONL training view through corpus_pipeline before using this file.
+# Evaluation reads the original human benchmark; new annotations are written separately.
+seed: 42
+source:
+  dataset: allenai/c4
+  configuration: kk
+  split: train
+corpus:
+  max_candidate_sentences: 30000
+  min_words: 5
+  max_words: 120
+splits:
+  train: 0.8
+  validation: 0.1
+  mlm_test: 0.05
+  annotation_pool: 0.05
+mlm:
+  probability: 0.15
+  max_sequence_length: 128
+training:
+  train_batch_size: 8
+  eval_batch_size: 8
+  learning_rate: 2.0e-05
+  max_steps: 300
+  eval_steps: 50
+  checkpoint_steps: 50
+  warmup_ratio: 0.05
+annotation:
+  candidate_count: 120
+evaluation:
+  bootstrap_samples: 2000
+models:
+  mbert:
+    display_name: mBERT
+    base_id: bert-base-multilingual-cased
+    adapted_dir: mbert-dapt
+    supports_mlm: true
+  xlmr:
+    display_name: XLM-R
+    base_id: xlm-roberta-base
+    adapted_dir: xlmr-dapt
+    supports_mlm: true
+  kazroberta:
+    display_name: Kaz-RoBERTa
+    base_id: kz-transformers/kaz-roberta-conversational
+    adapted_dir: kazroberta-dapt
+    supports_mlm: true
+  labse:
+    display_name: LaBSE
+    base_id: sentence-transformers/LaBSE
+    adapted_dir: labse-adapted-optional
+    supports_mlm: false
+paths:
+  data_dir: data
+  annotations_dir: data/annotations
+  models_dir: models/adilet
+  results_dir: results
+  metrics_dir: results/metrics/adilet
+  figures_dir: results/figures/adilet
+  corpus_jsonl: data/legal_candidate_corpus.jsonl
+  corpus_statistics: data/corpus_statistics.json
+  train_jsonl: data/train.jsonl
+  validation_jsonl: data/validation.jsonl
+  mlm_test_jsonl: data/mlm_test.jsonl
+  annotation_pool_jsonl: data/annotation_pool.jsonl
+  split_metadata: data/split_metadata.json
+  annotation_candidates: data/legal_corpus/annotation_candidates.csv
+  annotation_output_dir: data/legal_corpus/annotations
+corpus_input:
+  kind: training_view
+  directory: data/legal_corpus/training-view-001

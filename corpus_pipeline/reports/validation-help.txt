@@ -1,0 +1,17 @@
+usage: validate_corpus.py validate [-h] --raw-dir RAW_DIR
+                                   --processed PROCESSED --derived DERIVED
+                                   --report REPORT [--repo-root REPO_ROOT]
+                                   [--qa-review QA_REVIEW] [--skip-overlap]
+                                   [--require-ready]
+
+options:
+  -h, --help            show this help message and exit
+  --raw-dir RAW_DIR
+  --processed PROCESSED
+  --derived DERIVED
+  --report REPORT
+  --repo-root REPO_ROOT
+  --qa-review QA_REVIEW
+  --skip-overlap        Structural diagnostics only; not research-export
+                        validation
+  --require-ready
