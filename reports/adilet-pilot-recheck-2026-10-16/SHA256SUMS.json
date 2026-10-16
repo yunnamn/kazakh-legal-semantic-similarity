@@ -1,0 +1,21 @@
+{
+  "REPORT.md": "2041cad055677c5e4e56d301e5584eb5e34d8920ac5b6ab90b1c1af478c3d923",
+  "actual-parser-check.json": "0468a6a177f2d67aa88383057c73a99b581a5572a073854dbc1dad004539337c",
+  "adilet-connectivity.jsonl": "f603b6a4253dcc238f5af6c6cc529a068fa5a48a087a0e02fbdbaecfbe3299ad",
+  "catalog-connectivity.jsonl": "31952f13421f4996e8edc27ba5a22b0a136f31bcd877e3290d1322c3edd2d2a6",
+  "catalog-discovery.json": "8ce2e1d0b3af1f5a6b23f5c5ba6a5fec5e50b6b701753b243f861358d6df01b4",
+  "catalog.upstream.lock.json": "d9c25f4bae9c1b9d37366aac1e1729374c725ffcbfcf2b7de0e838b4e4af4d55",
+  "download-route-checks.jsonl": "07993f13a2f6c48e9ad5544f88a2b734808c3e97a296a857f731fc873cb6a802",
+  "download-tab-check.json": "3df8ad163320c2e7d4893fc5aef2eb78b0475f6aaa969ca0a544a598a58bbd90",
+  "frontend-check.json": "0336b8673d748a2936f8eb535d3e0541b33b2dee18e9a44a04261912f1e8812b",
+  "manual-first-10.json": "66107b980eae855d031d96f68a938c4dc5244283ca81edee12f1b949a8d40431",
+  "manual-sidecar.uncompleted.json": "2e40cd7d14d9138b44646260ef797dc7cef910fc0cceb0ba3891b169b299a6a9",
+  "planned-75.jsonl": "b188deb479802ca80104aa030bee9d85a6956c1e4a7cb90c19be41c0aaa303eb",
+  "policy-checks.jsonl": "f241f5de638c428fe387f13d2ff6d29f26925ddf511b7dd09defdc579da09779",
+  "public-ui-findings.json": "eebcba152792fb61f830a4c4f4b5df9a6daa4dd68918672f80d5e328fa7ea307",
+  "pytest.txt": "c0bed98ae0f4945800eb6abdc989575c905d990f461177d3ac0df56e772f4692",
+  "results.json": "a9feea5cd8abdc4538178a0944007d4c1848648a1101a3493e6e3626e576bde9",
+  "robots.txt": "3dbe9db03c88350e711c4e8949ebaf26f38a75298e8e5e9c805cf57ec519ec49",
+  "terms-check.json": "6aef53de7054faa29b2eea94e089c3ca4760a787128aaf441dce9400b5647550",
+  "../../docs/MANUAL_FIRST_10.md": "d714b90a3707fb0e5757340d84b4637430c266c2c0b5b7b8f0ce4377b5b8d1b0"
+}

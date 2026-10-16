@@ -1,0 +1,13 @@
+{
+  "inspection_method": "Read publicly referenced JavaScript assets, not private API calls or a rendered authenticated browser session.",
+  "api_base_path": "/api",
+  "api_requested": false,
+  "observed_document_body_selector": "[data-tour=\"doc-body-content\"]",
+  "selector_verified_against_actual_saved_legal_text": false,
+  "observed_download_format": "PDF",
+  "guest_export_requires_sign_in": true,
+  "limits_present": true,
+  "actual_pdf_downloaded": false,
+  "no_observed_native_txt_html_docx_export_in_download_component": true,
+  "support_contact_observed_in_terms": "support@zqai.kz"
+}

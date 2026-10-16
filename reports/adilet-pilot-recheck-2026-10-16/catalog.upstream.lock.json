@@ -1,0 +1,17 @@
+{
+  "files": [
+    {
+      "filename": "README.md",
+      "receipt_id": "9287ad00a4f1741b7fa0f4261610683af5b390681d93301d65f66e3c3f9af94e",
+      "sha256": "8694de961ecb37eeabb9e3c906eeef08ca88ee7ec42bbaa335c544632fdbeef8"
+    },
+    {
+      "filename": "data/kazakhlawcorpus_kk_only.csv",
+      "receipt_id": "c4690bf95858442187331638e02661f2f014add34a1a979ab622ce1d203383a5",
+      "sha256": "1099c257c6f9d82b56318b1f887b6d6051fd8518816bac458ed48f068a8d0d1b"
+    }
+  ],
+  "repo_id": "Arailym-tleubayeva/KazakhLawCorpus-clean",
+  "revision": "588f13ed7af351c485955698de72de18fe9acce8",
+  "upstream_scrape_time": "unknown unless supplied by the publisher; not the Hub download time"
+}
