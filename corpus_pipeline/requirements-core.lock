@@ -1,0 +1,4 @@
+# Exact core packages observed in the offline validation environment.
+beautifulsoup4==4.14.3
+soupsieve==2.8.4
+typing_extensions==4.16.0

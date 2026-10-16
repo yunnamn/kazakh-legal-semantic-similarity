@@ -1,0 +1,44 @@
+{
+  "assessment_date": "2026-09-07",
+  "delivery_kind": "standalone_additive_toolkit_not_an_upstream_patch",
+  "target_repository": "https://github.com/yunnamn/kazakh-legal-semantic-similarity",
+  "target_repository_commit": null,
+  "original_repository_files_inspected": 0,
+  "original_experimental_design_reconstructed": false,
+  "original_repository_modified": false,
+  "original_semantic_evaluation_rerun": false,
+  "repository_integration_complete": false,
+  "authentic_corpus_documents_acquired": 0,
+  "authentic_research_sentences_released": 0,
+  "human_source_qa_completed": false,
+  "models_trained": 0,
+  "implemented_pipeline_code_sha256": "803e9206babb54330758f694a4f07ebe78604748032ad8ef180753737ae842dc",
+  "offline_tests": {
+    "tests": 75,
+    "passed": 75,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "report": "pytest-results.xml"
+  },
+  "observed_checks": {
+    "editable_install": "passed",
+    "installed_cli_help": "passed",
+    "validation_script_help": "passed",
+    "python_compileall": "passed",
+    "shell_syntax": "passed"
+  },
+  "not_tested": [
+    "live Adilet availability/DOM/access",
+    "complete reusable-source download and quality",
+    "optional Parquet/Arrow",
+    "original model/loader/evaluation integration",
+    "native human QA",
+    "GPU training",
+    "full-corpus scaling",
+    "proposed multi-version online CI"
+  ],
+  "fixture_policy": "Generated test fixtures are explicitly TEST_ONLY, nonlegal, temporary, and permanently blocked from research export.",
+  "research_export_status": "blocked_pending_actual_acquisition_original_experiment_review_and_human_QA",
+  "next_required_input": "Complete original reference checkout with relevant LFS/external evaluation files, plus permitted authentic source acquisitions."
+}

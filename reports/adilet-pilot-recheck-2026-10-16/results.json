@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-10-16T09:53:28.707221+00:00",
+  "base_commit": "165e9f577c13bde47f85b863f2ac953b628ae06f",
+  "adilet_network": "HTTP 200; restored",
+  "catalog_network": "HTTP 200; restored",
+  "catalog_csv_acquired": true,
+  "catalog_rows_inspected": 215889,
+  "catalog_eligible_distinct_acts": 215888,
+  "catalog_rows_rejected": 1,
+  "planned_distinct_acts": 75,
+  "manual_first_batch": 10,
+  "official_legal_documents_acquired": 0,
+  "official_legal_documents_processed": 0,
+  "official_legal_documents_retained": 0,
+  "direct_document_response": "JavaScript application shell, no legal text",
+  "direct_shell_parser_result": "CorpusError: Expected one verified legal-text container, found 0; inspect the saved HTML and supply selector",
+  "law_page_http_success_is_not_corpus_success": true,
+  "authentic_corpus_end_to_end": "not_completed",
+  "corpus_language_quality": null,
+  "corpus_duplicates": null,
+  "corpus_cross_split_leakage": null,
+  "split_counts": null,
+  "manual_html_supported_by_existing_pipeline": true,
+  "manual_current_site_html_validated": false,
+  "manual_pdf_docx_supported_by_existing_pipeline": false,
+  "tests": {
+    "passed": 122,
+    "deselected": 1,
+    "failed": 0,
+    "training_not_run": true
+  },
+  "source_review": {
+    "terms_url": "https://adilet.zan.kz/legal/polzovatelskoe-soglashenie.docx",
+    "research_use_clause": "4.3.2",
+    "official_text_copyright_clause": "1.7",
+    "excess_load_restriction": "4.4.4",
+    "robots_disallows_api": true,
+    "no_api_or_export_access_controls_bypassed": true,
+    "automated_training_crawler_permission": "not_established",
+    "full_page_redistribution": "not_approved",
+    "corpus_redistribution": "pending_actual_content_review"
+  }
+}

@@ -23,6 +23,7 @@ def main() -> None:
     test_df = load_split("mlm_test", config)
     result = evaluate_mlm_checkpoint(args.model, args.variant, test_df, config)
     out = get_path(config, "metrics_dir") / f"{args.model}_{args.variant}_mlm.json"
+    out.parent.mkdir(parents=True, exist_ok=True)
     pd.Series(result).to_json(out, force_ascii=False, indent=2)
     print(pd.Series(result).to_string())
 

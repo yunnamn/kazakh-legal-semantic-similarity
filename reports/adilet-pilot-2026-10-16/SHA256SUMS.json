@@ -1,0 +1,13 @@
+{
+  "REPORT.md": "187222f69192d63b4f4847c38a66092a67658f78fa5201280733a714252c911b",
+  "access-attempts.jsonl": "d04c7490eb60a9f20308b5b77701f68027a18336f6d273a4a9368393bc4bbefb",
+  "adilet-source-review.unapproved.json": "9e497f9216324aefc1d57438993ecb7176b763092603192d020506bd2f806959",
+  "catalog-acquisition.redacted.log": "016430d7a637569c309a662960f0d4232c44253ee64c2efaab0e7295d082025a",
+  "catalog-card.md": "8694de961ecb37eeabb9e3c906eeef08ca88ee7ec42bbaa335c544632fdbeef8",
+  "catalog-download-checks.jsonl": "11ac0940741202af38e071a191008cba9aec4cdb7142712505cc2f488c50e5e6",
+  "catalog-inspection.json": "2a7568a15eb11b04115806cd79be2d1afd20b846ca4e62eb1e2e548b82adbc5c",
+  "catalog-source-review.json": "351836e6d9d3b21df4a9b4c8fdf4c9a3b75563492daa8448cba8cceb7b8ba196",
+  "environment.json": "129c6abd37096f8272ea6d227fc2b6d5daa3574789f5519a8da196ed90b52492",
+  "pytest.txt": "c8791e8a40b611c8c3bd65430f3babfa081460520a7906bb90e4fd9b1ebb857a",
+  "results.json": "81f7019130bad9c6868f6add9ef4e40f623584518f2cb237b0510c985adcacb0"
+}

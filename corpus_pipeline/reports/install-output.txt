@@ -1,0 +1,14 @@
+WARNING: The directory '/home/oai/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Obtaining file:///mnt/data/kazakh_legal_upgrade/delivery/corpus_pipeline
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: kazlegal-corpus
+  Building editable for kazlegal-corpus (pyproject.toml): started
+  Building editable for kazlegal-corpus (pyproject.toml): finished with status 'done'
+  Created wheel for kazlegal-corpus: filename=kazlegal_corpus-0.1.0-0.editable-py3-none-any.whl size=2772 sha256=5931c798f8eda12b1506ff1d8c5c3cb8e5d2ba94a9c93e8ec576d171772e94c1
+  Stored in directory: /tmp/pip-ephem-wheel-cache-0d2feeji/wheels/ab/98/d5/3dc9b73bad16b5eb76a1185e447a1810f1f340da0eefede689
+Successfully built kazlegal-corpus
+Installing collected packages: kazlegal-corpus
+Successfully installed kazlegal-corpus-0.1.0

@@ -1,0 +1,8 @@
+{
+  "actual_response_sha256": "5e3d54c977f7ca6a1fd4dbacbe6c1334ca67ec269ee9b1b1a99f61615a712ffb",
+  "bytes": 1573,
+  "source_url": "https://adilet.zan.kz/kaz/docs/G20E0000668",
+  "parser_result": "rejected",
+  "error": "Expected one verified legal-text container, found 0; inspect the saved HTML and supply selector",
+  "statutory_body_present": false
+}

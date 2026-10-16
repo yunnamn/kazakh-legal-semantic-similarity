@@ -1,0 +1,30 @@
+{
+  "assessment_date": "2026-09-07",
+  "target": "https://github.com/yunnamn/kazakh-legal-semantic-similarity",
+  "repository_commit": null,
+  "source_files_obtained": 0,
+  "scientific_audit_complete": false,
+  "observations": [
+    {
+      "route": "GitHub repository page",
+      "result": "web fetch failed: Cache miss"
+    },
+    {
+      "route": "raw.githubusercontent.com main README",
+      "result": "web fetch failed: Cache miss"
+    },
+    {
+      "route": "GitHub API repository endpoint",
+      "result": "web tool rejected/failed URL access"
+    },
+    {
+      "route": "container clone/download",
+      "result": "network/DNS access failed; no checkout obtained"
+    },
+    {
+      "route": "GitHub plugin",
+      "result": "suggested; no authenticated connection became available"
+    }
+  ],
+  "interpretation": "Access failure is not evidence that the repository is private, deleted or invalid. No original-repository findings are asserted."
+}

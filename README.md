@@ -139,6 +139,23 @@ Evaluate semantic similarity after annotation:
 python scripts/evaluate_similarity.py
 ```
 
+## Official-source corpus alternative
+
+The additive [`corpus_pipeline/`](corpus_pipeline/README.md) toolkit from the supplied
+archive acquires and validates authentic-source Kazakh legal text, preserves provenance,
+and protects law-family and text-overlap boundaries. It contains code and test fixtures,
+not a downloaded legal corpus or completed source reviews.
+
+Install the integration with `python -m pip install -r requirements-dev.txt`. After
+building a reviewed JSONL research export, use `--config config/adilet.yaml` with
+the existing training, MLM evaluation, and annotation scripts. The C4 default remains
+available. The new loader verifies the export and consumes its existing four roles
+without applying the C4 keyword filter or resplitting sentences.
+
+See [integration and reproducible commands](docs/LEGAL_CORPUS.md) for acquisition,
+review requirements, separate outputs, and tests. No real corpus release, human review,
+large-model training or semantic benchmark result is claimed by this integration.
+
 ## Results
 
 Results are reported only for completed experiments. Semantic-similarity evaluation remains pending manual annotation unless completed human annotation files are present.

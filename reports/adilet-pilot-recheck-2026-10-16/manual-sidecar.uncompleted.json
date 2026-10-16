@@ -1,0 +1,18 @@
+{
+  "source": "adilet",
+  "adapter": "adilet_html",
+  "format": "html",
+  "source_document_id": "REPLACE_WITH_SELECTED_DOCUMENT_ID",
+  "source_url": "REPLACE_WITH_ACTUAL_OFFICIAL_DOWNLOAD_URL",
+  "canonical_url": "REPLACE_WITH_SELECTED_KAZ_DOCS_URL",
+  "language": "kk",
+  "title": null,
+  "source_version": null,
+  "source_retrieved_at": null,
+  "retrieved_at": null,
+  "acquisition_method": "manual",
+  "acquisition_note": null,
+  "selector": "[data-tour=\"doc-body-content\"]",
+  "source_review": {},
+  "selector_note": "Candidate from the public current frontend; must match one nonempty legal-text container in the saved rendered HTML. Leave null for the old supported layouts; do not select body or html."
+}

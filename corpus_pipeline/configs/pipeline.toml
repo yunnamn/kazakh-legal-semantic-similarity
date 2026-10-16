@@ -1,0 +1,30 @@
+schema_version = 1
+# PROVISIONAL. These values have NOT been reconstructed from the inaccessible repo.
+# A reviewed experiment lock must explicitly accept these settings before export.
+profile = "adilet_primary"
+allow_reused_text = false
+keep_editorial_notes = true
+quarantine_chunk_boundary_sentences = true
+
+[split]
+seed = "kazlegal-corpus-v1"
+[split.weights]
+train = 8000
+validation = 1000
+mlm_test = 500
+annotation_pool = 500
+
+[dedup]
+# Near matches are CO-LOCATED, never deleted or labelled semantically equivalent.
+near_jaccard = 0.90
+shingle_words = 5
+min_near_words = 12
+min_informative_shared_words = 8
+max_shared_families = 100
+overlap_words = 32
+max_candidates_per_unit = 100000
+
+[release]
+require_all_splits_nonempty = true
+max_component_fraction = 0.35
+minimum_reviewed_documents_per_source = 10

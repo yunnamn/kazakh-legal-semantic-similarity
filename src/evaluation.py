@@ -28,14 +28,14 @@ def lexical_baseline_scores(pairs_df: pd.DataFrame) -> pd.DataFrame:
     )
 
 
-def score_pairs_with_encoder(pairs_df: pd.DataFrame, model_key: str, variant: str = "base") -> pd.DataFrame:
+def score_pairs_with_encoder(pairs_df: pd.DataFrame, model_key: str, variant: str = "base", config: dict | None = None) -> pd.DataFrame:
     if model_key == "labse":
         if variant != "base":
             raise ValueError("Adapted LaBSE is not part of the core experiment.")
-        encoder = LaBSEEncoder()
+        encoder = LaBSEEncoder(config=config)
         label = "labse_base"
     else:
-        encoder = TransformerSentenceEncoder(model_key, variant)
+        encoder = TransformerSentenceEncoder(model_key, variant, config=config)
         label = f"{model_key}_{variant}"
     left = encoder.encode(pairs_df["sentence_1"].tolist())
     right = encoder.encode(pairs_df["sentence_2"].tolist())
@@ -102,18 +102,19 @@ def run_sts_evaluation(config: dict | None = None) -> tuple[pd.DataFrame, pd.Dat
     pairs, agreement = load_human_annotations(config)
     scores = pairs[["pair_id", "human_score"]].copy()
     scores = scores.merge(lexical_baseline_scores(pairs), on="pair_id", how="left")
-    scores = scores.merge(score_pairs_with_encoder(pairs, "labse", "base"), on="pair_id", how="left")
+    scores = scores.merge(score_pairs_with_encoder(pairs, "labse", "base", config=config), on="pair_id", how="left")
     specs = model_specs(config)
     for key in ["mbert", "xlmr", "kazroberta"]:
         for variant in ["base", "dapt"]:
             if variant == "dapt" and not (specs[key]["adapted_dir"] / "config.json").exists():
                 continue
-            scored = score_pairs_with_encoder(pairs, key, variant)
+            scored = score_pairs_with_encoder(pairs, key, variant, config=config)
             scores = scores.merge(scored, on="pair_id", how="left")
     metrics = pd.DataFrame(
         [evaluate_score_column(scores, col, config) for col in scores.columns if col not in {"pair_id", "human_score"}]
     ).sort_values("spearman", ascending=False)
     metrics_dir = get_path(config, "metrics_dir")
+    metrics_dir.mkdir(parents=True, exist_ok=True)
     metrics.to_csv(metrics_dir / "sts_metrics.csv", index=False)
     scores.to_csv(metrics_dir / "sts_pair_scores.csv", index=False)
     if not agreement.empty:

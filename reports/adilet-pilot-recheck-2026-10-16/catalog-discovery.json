@@ -1,0 +1,48 @@
+{
+  "catalog_receipt_id": "c4690bf95858442187331638e02661f2f014add34a1a979ab622ce1d203383a5",
+  "eligible_unique_acts": 215888,
+  "input_rows": 215889,
+  "limit": 75,
+  "rejections": [
+    {
+      "locator": {
+        "csv_end_line": 217082,
+        "record_index": 211647
+      },
+      "reason": "Invalid Adilet identifier: 'V97L000010_ '"
+    }
+  ],
+  "sampling": "document-ID hash ranking, not relevance or model-score sampling",
+  "schema_version": 1,
+  "seed": "adilet-pilot-2026-10-16-v1",
+  "selected_act_form": {
+    "Бұйрық": 3,
+    "Бұйрық, Қағида": 1,
+    "Ереже, Қаулы": 1,
+    "Нормалар (Нормативтер)  , Бұйрық": 1,
+    "Нормативтік қаулы": 1,
+    "Нұсқаулық": 1,
+    "Толықтыру, Қаулы": 1,
+    "Толықтыру, Өзгерту, Қаулы": 1,
+    "Шешім": 20,
+    "Шешім, Нормалар (Нормативтер)": 1,
+    "Шешім, Өзгерту": 5,
+    "Шешім, Өзгерту, Толықтыру": 1,
+    "Қаулы": 18,
+    "Қаулы, Келісім": 1,
+    "Қаулы, Стандарт": 2,
+    "Қаулы, Тізбе": 2,
+    "Қаулы, Шешім": 1,
+    "Қаулы, Қағида": 1,
+    "Қаулы, Өзгерту": 1,
+    "Қағида": 1,
+    "Қағида, Жарлық": 1,
+    "Өзгерту, Шешім": 6,
+    "Өзгерту, Қаулы": 2,
+    "Өзгерту, Қаулы, Регламент": 1,
+    "Өкім": 1
+  },
+  "selected_acts": 75,
+  "status_policy": "all",
+  "warning": "not_marked_repealed is publisher metadata, not a legal opinion on current validity"
+}

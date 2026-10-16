@@ -1,0 +1,19 @@
+{
+  "recorded_at": "2026-10-16T09:28:19.843683+00:00",
+  "python": "3.12.14",
+  "packages": {
+    "kazlegal-corpus": "0.1.0",
+    "beautifulsoup4": "4.14.3",
+    "soupsieve": "3.0.3",
+    "huggingface-hub": "1.33.0",
+    "pytest": "9.1.1",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6"
+  },
+  "pipeline_base_commit": "eb8995f394b6606009ef11cfdc6ed3148d2e1391",
+  "main_commit": "5e84833d520eb5fed9fbc63e322a3fe0373a73d5",
+  "pipeline_config_sha256": "5fc461f890ec20d6df3a8a83ebd74aa87b109b89555f32dc37af4fb2e4fc77c7",
+  "policy_changes": false,
+  "real_content_documents_acquired": 0,
+  "human_annotation_artifacts_present": 0
+}
