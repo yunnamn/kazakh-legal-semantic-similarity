@@ -1,0 +1,11 @@
+{
+  "repo_id": "Arailym-tleubayeva/KazakhLawCorpus-clean",
+  "revision": "588f13ed7af351c485955698de72de18fe9acce8",
+  "files": [
+    ".gitattributes",
+    "README.md",
+    "data/kazakhlawcorpus_kk_only.csv"
+  ],
+  "adapter": "catalog_clean",
+  "warning": "Discovery only. Read the pinned dataset card/license; no reuse approval is implied."
+}

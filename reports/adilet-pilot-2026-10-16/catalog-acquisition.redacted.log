@@ -1,0 +1,2 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+ERROR: Pinned Hub acquisition failed for data/kazakhlawcorpus_kk_only.csv: Task error: File reconstruction error: CAS Client Error: Request middleware error: error sending request for url (https://us.aws.cdn.hf.co/xorbs/default/9443377ff6516b2b6a526a6a543b9901174c5ba14c9e6c729546122ef190a3dc[signed query omitted])

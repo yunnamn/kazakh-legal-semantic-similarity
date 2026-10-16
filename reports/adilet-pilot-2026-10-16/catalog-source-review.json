@@ -1,0 +1,14 @@
+{
+  "source": "Arailym-tleubayeva/KazakhLawCorpus-clean",
+  "research_use_approved": true,
+  "license": "CC-BY-4.0 (publisher declaration for the metadata dataset)",
+  "license_url": "https://huggingface.co/datasets/Arailym-tleubayeva/KazakhLawCorpus-clean/blob/588f13ed7af351c485955698de72de18fe9acce8/README.md",
+  "attribution": "Arailym Tleubayeva; KazakhLawCorpus-clean; revision 588f13ed7af351c485955698de72de18fe9acce8; citation supplied by publisher: Tleubayeva et al. (2026), KazakhLawCorpus: A Large-Scale Metadata Corpus for Kazakh Legislation, Data 11(9), 217, doi:10.3390/data11090217 (citation not independently verified).",
+  "reviewer": "Codex automated review of the pinned publisher card; not human legal-text QA",
+  "reviewed_at": "2026-10-16T09:26:52.191367+00:00",
+  "access_basis": "Public Hugging Face revision API and README successfully retrieved over HTTPS. Pinned card explicitly permits sharing/adapting with attribution under CC BY 4.0. No authentication or restriction bypass used.",
+  "authenticity_assessment": "Curator-supplied discovery metadata only. Catalog IDs/URLs will be checked by the existing adapter. This does not authenticate Adilet body text or current legal status.",
+  "redistribution": "permitted",
+  "scope": "Metadata discovery only; not permission for automated Adilet access or redistribution of official snapshots.",
+  "license_evidence_sha256": "8694de961ecb37eeabb9e3c906eeef08ca88ee7ec42bbaa335c544632fdbeef8"
+}

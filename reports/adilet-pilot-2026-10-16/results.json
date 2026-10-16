@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-16T09:36:44.069765+00:00",
+  "outcome": "blocked_before_official_document_acquisition",
+  "base_commit": "eb8995f394b6606009ef11cfdc6ed3148d2e1391",
+  "branch": "codex/authentic-corpus-pilot",
+  "target_documents": 75,
+  "official_content": {
+    "document_body_requests": 0,
+    "distinct_documents_acquired": 0,
+    "documents_processed": 0,
+    "documents_rejected": 0,
+    "documents_retained": 0,
+    "sentences_retained": 0,
+    "authentic_examples_available": 0,
+    "counts_note": "No legal bodies reached the pipeline. Zero rejected is not a successful quality screen."
+  },
+  "stage_status": {
+    "source_access_and_redistribution_review": "incomplete: live Adilet access policy unavailable; historical Article 8 claim not reverified",
+    "adilet_robots_preflight": "proxy_connect_403_on_two_executed_attempts",
+    "adilet_source_review_approved": false,
+    "official_raw_freeze": {
+      "exit_code": 2,
+      "error": "No content acquisitions to freeze"
+    },
+    "parsing_normalization_language_checks": "not_run_on_authentic_documents",
+    "deduplication": "not_run_on_authentic_documents",
+    "family_split": "not_run_on_authentic_documents",
+    "cross_split_leakage_validation": "not_run_on_authentic_documents",
+    "human_source_qa": "not_performed",
+    "training_view_export": "not_produced",
+    "training_view_real_data_integration": "not_validated",
+    "authentic_end_to_end_build": "not_completed"
+  },
+  "splits": {
+    "train": null,
+    "validation": null,
+    "mlm_test": null,
+    "annotation_pool": null
+  },
+  "corpus_quality_metrics": null,
+  "catalog_discovery": {
+    "repo_id": "Arailym-tleubayeva/KazakhLawCorpus-clean",
+    "revision": "588f13ed7af351c485955698de72de18fe9acce8",
+    "license_card_downloaded": true,
+    "card_sha256": "8694de961ecb37eeabb9e3c906eeef08ca88ee7ec42bbaa335c544632fdbeef8",
+    "csv_downloaded": false,
+    "catalog_download_exit_code": 2,
+    "download_hostname": "us.aws.cdn.hf.co",
+    "advertised_csv_bytes": 336764115,
+    "advertised_csv_etag": "1099c257c6f9d82b56318b1f887b6d6051fd8518816bac458ed48f068a8d0d1b",
+    "publisher_claimed_records": 215889,
+    "measured_catalog_rows": null,
+    "selected_document_ids": 0,
+    "raw_evidence_receipts": [
+      {
+        "receipt_id": "8116f4ea39b8be089bb6a961a3c6823d915d071abae196125fe1d2f8bdfea71f",
+        "role": "license_evidence",
+        "sha256": "8694de961ecb37eeabb9e3c906eeef08ca88ee7ec42bbaa335c544632fdbeef8"
+      }
+    ],
+    "cdn_outside_sandbox_retry": "cancelled_by_user_not_executed"
+  },
+  "tests": {
+    "passed": 122,
+    "failed": 0,
+    "deselected": 1,
+    "deselected_test": "test_project_dapt_trains_saves_and_evaluates_local_checkpoint",
+    "reason": "No DAPT requested; training regression intentionally excluded.",
+    "scope": "Software regression fixtures and loader contracts, not validation of acquired legislation.",
+    "smoke": "passed",
+    "dependencies": "pip check passed"
+  },
+  "experiment_guard": {
+    "completed_human_annotation_files_present": 0,
+    "reference_inventory_files": 101,
+    "frozen_experiment_lock_created": false
+  },
+  "network": {
+    "adilet_domain_requirement_saved_to_draft": true,
+    "runtime_change_verified": false,
+    "catalog_cdn_domain_requirement_saved_to_draft": true
+  },
+  "raw_legal_texts_committed": false,
+  "corpus_release_created": false,
+  "model_training_run": false
+}

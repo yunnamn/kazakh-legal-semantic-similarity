@@ -1,0 +1,13 @@
+........................................................................ [ 59%]
+..................................................                       [100%]
+=============================== warnings summary ===============================
+tests/test_evaluation.py::test_evaluate_score_column_returns_correlations
+  /workspace/kazakh-legal-semantic-similarity/src/evaluation.py:48: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+    value = spearmanr(x, y).statistic
+
+tests/test_evaluation.py::test_evaluate_score_column_returns_correlations
+  /workspace/kazakh-legal-semantic-similarity/src/evaluation.py:55: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+    value = pearsonr(x, y).statistic
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+122 passed, 1 deselected, 2 warnings in 4.78s
